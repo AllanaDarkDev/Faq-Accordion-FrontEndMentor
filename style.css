@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Pink: hsl(275, 100%, 97%);
+    --Grayish-Purple: hsl(292, 16%, 49%);
+    --Dark-Purple: hsl(292, 42%, 14%);
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+}
+
+.background {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+}
+
+.content {
+    background-color: var(--Light-Pink);
+    height: 100vh;
+}
+
+.component {
+    background-color: var(--White);
+    border-radius: 10px;
+    width: 450px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0px 26px 80px -46px rgba(0,0,0,0.75);
+}
+
+button {
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+
+.top:hover {
+    cursor: pointer;
+    color: var(--Grayish-Purple);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.close {
+    background-image: url("assets/images/icon-minus.svg");
+    background-size: cover;
+}
+
+.open {
+    background-image: url("assets/images/icon-plus.svg");
+    background-size: cover;
+}
+
+.title, article {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+article {
+    border-bottom: 0.5px solid #eae8eb;
+}
+
+article:nth-last-child(1) {
+    border-bottom: none;
+    padding-bottom: 20px;
+}
+
+.title {
+    display: flex;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+.bottom {
+    transition: 0.25s;
+}
+
+.hide {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+p {
+    font-size: 16px;
+    color: #857c88;
+}
+
+@media (min-width: 768px) {
+    .component {
+        width: 500px;
+    }
+}
