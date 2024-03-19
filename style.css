@@ -21,10 +21,9 @@ body {
 }
 
 .component {
+    margin: auto;
     position: relative;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%);
+    top: 170px;
     background-color: var(--White);
     border-radius: 10px;
     width: 450px;
